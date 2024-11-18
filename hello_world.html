@@ -1,0 +1,119 @@
+<html>
+<head>
+<title> My First Page</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+#hello_image{
+position: absolute; 
+top: 50%; 
+left: 50%; 
+transform: translate(40%, -10%); 
+-webkit-filter: drop-shadow(5px 5px 5px #FFEFD5); 
+filter: drop-shadow(5px 5px 5px #FFEFD5); 
+}
+body{
+background-color:#FFEFD5;
+background-image: url(images/fon.jpg); 
+background-size: contain;
+background-repeat:no-repeat;
+}
+#text{
+position: absolute; 
+top: 60%; 
+left: 55%; 
+transform: translate(100%, -100%); 
+-webkit-filter: drop-shadow(5px 5px 5px #FFEFD5); 
+filter: drop-shadow(5px 5px 5px #FFEFD5); 
+color: saddlebrown;
+}
+#hw{
+position: absolute; 
+top: 10%; 
+left: 35%; 
+transform: translate(20%, -50%); 
+-webkit-filter: drop-shadow(5px 5px 5px #FFEFD5); 
+filter: drop-shadow(5px 5px 5px #FFEFD5); 
+color: chocolate;
+}
+
+#demo {
+ position: absolute;
+ top: 10%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+font-family: "Sofia", sans-serif;
+font-size: 30px;
+color: blue;
+}
+
+
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.box {
+    animation: grow-and-shrink 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+</style>
+<script>
+var flag=false;
+function playAudio(url) {
+if (!flag){
+ var audio = new Audio(url);
+ audio.loop=true;
+ audio.play();
+ flag=true;}
+}
+</script>
+
+</head>
+<body>
+<div id="hw">
+<h1 align="center" onclick="playAudio('images/utramm.mp3')">Hello, World !<br> Винни Пух <br> Ходите в гости по утрам</h1>
+</div>
+<div id="text"> 
+<h4 align="center">Кто ходит в гости по утрам,
+<br>Тот поступает мудро.
+<br>Известно всем, тарам-парам,
+<br>На то оно и утро!
+<br>На то оно и утро!
+<br>Скучна вечерняя пора,
+<br>Хозяева зевают.
+<br>Но если гость пришёл с утра,
+<br>Такого не бывает!
+<br>Такого не бывает!
+<br>Да, если гость пришёл с утра,
+<br>Ему спешить не надо.
+<br>Кричат хозяева: "Ура!",
+<br>Они ужасно рады! 
+<br>Они ужасно рады!
+<br>Недаром солнце в гости к нам
+<br>Всегда приходит по утрам.
+<br>Тарам-парам, тарам-парам,
+<br>Ходите в гости по утрам!
+<br>Тарам-парам, тарам-парам,
+<br>Ходите в гости по утрам! </h4>
+</div>
+<div id="hello_image"> 
+<img src="images/pmp.png" class="box" width=90% height=auto>
+</div>
+</div>
+<p id="demo"></p>
+<script>
+document.getElementById("hello_image").addEventListener("click", function() {
+document.getElementById("demo").innerHTML = "Happy New Year";
+});
+</script>
+
+</body>
+</html>
